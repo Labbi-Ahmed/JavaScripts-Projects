@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+
+main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#span {
+    font-size: 5rem;
+}
+.buttonContainer {
+    margin-top: 1rem;
+    display: flex;
+}
+
+.btn{
+    padding: 3px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+}
