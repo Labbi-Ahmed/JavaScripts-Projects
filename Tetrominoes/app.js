@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'purple',
         'green',
         'blue'
-
     ]
     
     const lTetromino = [
