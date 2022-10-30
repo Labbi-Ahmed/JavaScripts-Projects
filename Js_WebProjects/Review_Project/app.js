@@ -63,22 +63,22 @@ preBtn.addEventListener('click', function(){
     currentItem--;
     if(currentItem < 0)
         currentItem = reviews.length-1;
-    addContentInHtml(currentItem);
+    addContentInHtml();
 })
 nextBtn.addEventListener('click', function(){
     currentItem++;
     currentItem%=reviews.length;
-    addContentInHtml(currentItem);
+    addContentInHtml();
 })
 
 randBtn.addEventListener('click',function(){
-    random = Math.floor(Math.random()*reviews.length)
-    addContentInHtml(random)
+    currentItem = Math.floor(Math.random()*reviews.length)
+    addContentInHtml()
 })
 
 
-function addContentInHtml(person){
-    const item = reviews[person];
+function addContentInHtml(){
+    const item = reviews[currentItem];
     img.src = item.img;
     authon.textContent = item.name
     job.textContent = item.job;
