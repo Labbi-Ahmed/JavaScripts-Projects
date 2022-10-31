@@ -1,0 +1,136 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+
+*,
+::after,
+::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 00.875rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: black;
+    background-color:#f3f7f8 ;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+nav {
+    background-color: #ffffff;
+    box-shadow: 2px 0 15px rgba(128, 128, 128, 0.439);
+}
+
+/* .nav-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+} */
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+
+.nav-toggle {
+    color: #84d9f6;
+    font-size: 1.5rem;
+    background: transparent;
+    border-color: transparent;
+    transition: .3s;
+}
+.nav-toggle:hover {
+    color: rgb(145, 141, 141);
+    transform: rotateZ(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a{
+    color: #6c6c6c;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    display: block;
+    padding: .5rem 1rem;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: #9fe1f6;
+    color: rgb(52, 155, 239);
+    padding-left: 1.5rem;
+}
+
+.social-icons {
+    display: none;
+}
+
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.show-links {
+    height: 10rem;
+}
+@media screen and (min-width: 800px) {
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        height: auto;
+        display: flex;
+    }
+
+    .links a{
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .links a:hover{
+        background: transparent;
+        padding: 0;
+    }
+    .social-icons{
+        display: flex;
+    }
+    .social-icons a {
+        margin: 0 0.5rem;
+        color: #17a9da;
+        transition: 0.3s;
+    }
+    .social-icons a:hover {
+        color: #84daf69a;
+    }
+}
