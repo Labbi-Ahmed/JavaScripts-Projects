@@ -5,6 +5,14 @@
 const menu = [
   {
     id: 1,
+    title: "desert items",
+    category: "desert",
+    price: 15.99,
+    img: "./images/item-1.jpeg",
+    desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+  },
+  {
+    id: 1,
     title: "buttermilk pancakes",
     category: "breakfast",
     price: 15.99,
@@ -86,28 +94,43 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector('.section-center');
-const filterBtns = document.querySelectorAll('.filter-btn')
+
+const containte = document.querySelector('.btn-container')
 window.addEventListener('DOMContentLoaded', function(){
   displayMenuItems(menu)
+  const categories = menu.reduce(function(values,item){
+    if(!values.includes(item.category))
+      values.push(item.category)
+    return values;
+  },['all'])
+    const categoryBtn = categories.map(function(category){
+      return `<button class="filter-btn" type="button" data-id="${category}">${category}</button>`
+    }).join('');
+    containte.innerHTML = categoryBtn;
+    displayBtn()
+  })
   
-})
-// filter items
-filterBtns.forEach(function(btn){
-  btn.addEventListener('click',function(e){
-    const category = e.currentTarget.dataset.id;
-    const menuCategroy = menu.filter(function(menuItem){
-      //console.log(menuItem.category)
-      if(menuItem.category === category)
-        return menuItem;
+function displayBtn (){
+  const filterBtns = document.querySelectorAll('.filter-btn')
+  // filter items
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click',function(e){
+      const category = e.currentTarget.dataset.id;
+      const menuCategroy = menu.filter(function(menuItem){
+        //console.log(menuItem.category)
+        if(menuItem.category === category)
+          return menuItem;
+      });
+      if(category === 'all')
+        displayMenuItems(menu);
+      else {
+        displayMenuItems(menuCategroy) 
+      }
+      
     });
-    if(category === 'all')
-      displayMenuItems(menu);
-    else {
-      displayMenuItems(menuCategroy) 
-    }
-    
   });
-});
+}
+
 
 
 
