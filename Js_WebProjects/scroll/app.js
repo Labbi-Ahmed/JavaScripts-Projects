@@ -33,7 +33,7 @@ window.addEventListener('scroll', function(){
     scrollHeight > navHeight ? navbar.classList.add('fixed-nav') : navbar.classList.remove('fixed-nav');
 
     scrollHeight > 500 ? topLink.classList.add('show-link') : topLink.classList.remove('show-link') ;
-})
+});
 // ********** smooth scroll ************
 const scrollLinks = document.querySelectorAll('.scroll-link');
 
